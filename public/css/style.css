@@ -1,4 +1,15 @@
-body {
+.homepage {
+  background-image: url("images/Ecuador-Santa-Cruz-Galapagos-Darwin-Station-Beach-Surfing-Stormtrooper-Backpacking-Backpacker-Travel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cartpage{
+  background-image: url("images/Ecuador-Santa-Cruz-Galapagos-Darwin-Station-Beach-Surfing-Stormtrooper-Backpacking-Backpacker-Travel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.itemspage {
   background-image: url("images/Ecuador-Santa-Cruz-Galapagos-Darwin-Station-Beach-Surfing-Stormtrooper-Backpacking-Backpacker-Travel.jpg");
   background-repeat: no-repeat;
   background-size: cover;
