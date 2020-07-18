@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     const Category = sequelize.define("category", {
       // Giving the Author model a name of type STRING
-      category: DataTypes.STRING
+      item_description: DataTypes.STRING
     });
     Category.associate = function(models) {
       // Associating Author with Posts
