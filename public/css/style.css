@@ -1,22 +1,80 @@
-.homepage {
-  background-image: url("images/Ecuador-Santa-Cruz-Galapagos-Darwin-Station-Beach-Surfing-Stormtrooper-Backpacking-Backpacker-Travel.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.cartpage{
-  background-image: url("images/Ecuador-Santa-Cruz-Galapagos-Darwin-Station-Beach-Surfing-Stormtrooper-Backpacking-Backpacker-Travel.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.itemspage {
-  background-image: url("images/Ecuador-Santa-Cruz-Galapagos-Darwin-Station-Beach-Surfing-Stormtrooper-Backpacking-Backpacker-Travel.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+#logo {
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 
-.header {
+}
+#websiteName {
+  text-size-adjust: 150px;
   text-align: center;
-  font-family: 'Comic Neue', cursive;
-  font-family: 'Dancing Script', cursive;
+  vertical-align: top;
+}
+.nav {
+  width: 100%;
+}
+
+#cartImg {
+  height: 70px;
+  
+}
+#cartLink {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+#mainBody {
+  background-image: url(../css/images/backgrounds/beachPic.jpg);
+  position: absolute;
+  top: 110px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.Sale {
+  text-align: center;
+
+}
+
+#armorBackground {
+  background-image: url(../css/images/backgrounds/waterWalkin.jpg);
+  position: absolute;
+  top: 110px;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+}
+
+.productsContainer {
+  background-color: white;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 75px;
+  width: 65%;
+}
+
+.productCard {
+  display: inline-flex;
+  margin: 30px;
+  width: 30%;
+}
+
+
+body {
+  margin: 0;
+}
+tr {
+  width: 100%;
+  border-spacing: 15%;
+}
+
+.card {
+  width: 33%;
+  padding: 50px;
 }
