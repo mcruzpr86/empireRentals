@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Category = sequelize.define("category", {
+    const Category = sequelize.define("Category", {
       // Giving the Author model a name of type STRING
       item_description: DataTypes.STRING
     });
