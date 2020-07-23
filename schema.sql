@@ -58,3 +58,4 @@ update products set categoryID=3 where category="Armor";
 update products set categoryID=2 where category="Vehicles";
 update products set categoryID=1 where category="Weapon";
 select * from products;
+select * from categories;
