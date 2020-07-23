@@ -1,21 +1,29 @@
--- DROP DATABASE IF EXISTS `rebelrentals`;
+DROP DATABASE IF EXISTS `rebelrentals`;
 CREATE DATABASE if not exists `rebelrentals`;
 USE `rebelrentals`;
--- CREATE TABLE if not exists `products` ( 
---  `id` int (11) AUTO_INCREMENT NOT NULL,     
---  `item_name` VARCHAR(255) NOT NULL,     
---  `item_description` varchar(1000),     
---  `category` varchar(255) NOT NULL references categories(category),    
---  `price` decimal(13,2) NOT NULL,  
---  `quantity` int(11) NOT NULL,  
---  `imgurl` varchar(1000),  /* Set ID as primary key */  
---  PRIMARY KEY ( `id` ) );
+
+
+CREATE TABLE if not exists `products` ( 
+ `id` int (11) AUTO_INCREMENT NOT NULL,     
+ `item_name` VARCHAR(255) NOT NULL,     
+ `item_description` varchar(1000),     
+ `category` varchar(255) NOT NULL references categories(category),    
+ `price` decimal(13,2) NOT NULL,  
+ `quantity` int(11) NOT NULL,  
+ `imgurl` varchar(1000),  /* Set ID as primary key */
+ `createdat` date,
+ `updatedat` date,   
+ PRIMARY KEY ( `id` ) );
  
--- CREATE TABLE if not exists `categories` (  
--- `category` varchar(255) NOT NULL,  
--- `item_description` varchar(1000) NOT NULL,  /* Set ID as primary key */  
--- PRIMARY KEY ( `category` ) );
-insert into categories (item_description, createdat, updatedat) 
+CREATE TABLE if not exists `categories` (  
+`category` varchar(255) NOT NULL,  
+`item_description` varchar(1000) NOT NULL,  /* Set ID as primary key */ 
+`createdat` date,
+`updatedat` date,  
+PRIMARY KEY ( `category` ) );
+
+
+insert into categories (category, item_description, createdat, updatedat) 
 values ("guns", current_timestamp(), current_timestamp()), ("Spacecrafts & land_vehicles", current_timestamp(), current_timestamp()), ("body_armor & helmets", current_timestamp(), current_timestamp());
 insert into products (item_name, item_description, category, price, quantity, imgurl, createdat, updatedat)
 values 
