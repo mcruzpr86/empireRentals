@@ -69,6 +69,7 @@
   display: inline-flex;
   margin: 30px;
   width: 30%;
+  height: 1000px;
 }
 
 
@@ -85,9 +86,26 @@ tr {
   
 }
 
+
+.productImg {
+  height: 300px;
+  width: 150px;
+}
+
+.weaponImg {
+  height: 100px;
+  width: 230px;
+}
+
+.vehiclesImg {
+  width: 220px;
+}
+
+=======
 * {
   box-sizing: border-box;
 }
+
  
 
 body.cart2 {
