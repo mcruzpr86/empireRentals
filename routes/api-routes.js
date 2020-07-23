@@ -1,9 +1,10 @@
 var db = require("../models")
 module.exports = function(app) {
-    app.get("/api/products/:category", function(req, res) {
-        db.Product.findAll({
+    app.get("/api/products/category/:id", function(req, res) {
+        db.Category.findOne({
+            include: [db.Product],
             where: {
-                category: req.params.category
+                id: req.params.id
             }
         }).then(function(dbProduct) {
             res.json(dbProduct);
@@ -12,7 +13,7 @@ module.exports = function(app) {
     app.get("/api/products/:id", function(req, res) {
         db.Product.findOne({
             where: {
-                item_name: req.params.item_name
+                id: req.params.id
             }
         }).then(function(dbProduct) {
             res.json(dbProduct)
