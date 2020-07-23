@@ -69,6 +69,7 @@
   display: inline-flex;
   margin: 30px;
   width: 30%;
+  height: 1000px;
 }
 
 
@@ -83,6 +84,20 @@ tr {
 .card {
   width: 60%;
   
+}
+
+.productImg {
+  height: 300px;
+  width: 150px;
+}
+
+.weaponImg {
+  height: 100px;
+  width: 230px;
+}
+
+.vehiclesImg {
+  width: 220px;
 }
 
  
