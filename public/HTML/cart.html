@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empire Rentals</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <div id="indexContainer">
-    <h1 class="SWtext" id="websiteName">
-      <a href="https://fontmeme.com/star-wars-font/"><img src="https://fontmeme.com/permalink/200721/aa84b866983ee563bcde29f164799b94.png" alt="star-wars-font" border="0"></a></h1>   
-     </div>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="indexContainer">
+      <h1 class="SWtext" id="websiteName">
+        <a href="https://fontmeme.com/star-wars-font/"
+          ><img
+            src="https://fontmeme.com/permalink/200721/aa84b866983ee563bcde29f164799b94.png"
+            alt="star-wars-font"
+            border="0"
+        /></a>
+      </h1>
+    </div>
 
     <a href="/index">
-        <img id="logo" src="../css/images/logo.jpg" alt="logo">
+      <img id="logo" src="../css/images/logo.jpg" alt="logo" />
     </a>
-    <div id="cartLink"><a href="/cart">
-        <img id="cartImg" src="../css/images/cart.png" alt="cart">
-        </a><h5> Cart</h5>
+    <div id="cartLink">
+      <a href="/cart">
+        <img id="cartImg" src="../css/images/cart.png" alt="cart" />
+      </a>
+      <h5>Cart</h5>
     </div>
 
     <nav>
@@ -27,7 +40,7 @@
         <div class="row">
           <div class="col">
             <ul class="nav justify-content-center nav-fill">
-              <li class="nav-item ">
+              <li class="nav-item">
                 <a class="nav-link text-danger" href="/index">Home</a>
               </li>
               <li class="nav-item">
@@ -41,110 +54,22 @@
               </li>
             </ul>
           </div>
-         </div>>
+        </div>
       </div>
     </nav>
 
-
-    <div id="mainBody"> <h2 class="SWtext Sale">Summer Sale!</h2> <h3 class="SWtext Sale">Get 50% off our summer collection!</h3> </div>
-    
-    <div class="shopping-cart">
-      <!-- Title -->
-      <div class="title">
-        Shopping Bag
-      </div>
-     
-      <!-- Product #1 -->
-      <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-        </div>
-     
-        <div class="image">
-          <img src="item-1.png" alt="" />
-        </div>
-     
-        <div class="description">
-          <span>Common Projects</span>
-          <span>Bball High</span>
-          <span>White</span>
-        </div>
-     
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-          </button>
-          <input type="text" name="name" value="1">
-          <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-          </button>
-        </div>
-     
-        <div class="total-price">$549</div>
-      </div>
-     
-      <!-- Product #2 -->
-      <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-        </div>
-     
-        <div class="image">
-          <img src="item-2.png" alt=""/>
-        </div>
-     
-        <div class="description">
-          <span>Maison Margiela</span>
-          <span>Future Sneakers</span>
-          <span>White</span>
-        </div>
-     
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-          </button>
-          <input type="text" name="name" value="1">
-          <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-          </button>
-        </div>
-     
-        <div class="total-price">$870</div>
-      </div>
-     
-      <!-- Product #3 -->
-      <div class="item">
-        <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-        </div>
-     
-        <div class="image">
-          <img src="item-3.png" alt="" />
-        </div>
-     
-        <div class="description">
-          <span>Our Legacy</span>
-          <span>Brushed Scarf</span>
-          <span>Brown</span>
-        </div>
-     
-        <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-          </button>
-          <input type="text" name="name" value="1">
-          <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-          </button>
-        </div>
-     
-        <div class="total-price">$349</div>
+    <div id="cartBody">
+      <div id="cartContainer">
+        <table id="cartTable">
+          <tr>
+            <th class="cartColumn">Item</th>
+            <th class="cartColumn">Price</th>
+          </tr>
+        </table>
       </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/cart.js"></script>
-</body>
+  </body>
 </html>
