@@ -1,7 +1,7 @@
-$.get("/api/products/category/3", function(data) {
-    console.log(data.Products)
+$.get("/api/products/category/3", function (data) {
+    console.log(data)
 
-    data.Products.forEach((product, index) => {
+    data.forEach((product, index) => {
         const productCard = $(`#card${index}`)
         const productImg = $(productCard).find("img.productImg")
         productImg.attr("src", product.imgurl)
@@ -11,7 +11,7 @@ $.get("/api/products/category/3", function(data) {
         description.text(product.item_description)
         const cartButton = $(productCard).find(".cartBtn")
         cartButton.attr("data-cartbutton", index)
-        const productPrice =  $(productCard).find("span")
+        const productPrice = $(productCard).find("span")
         productPrice.text(product.price)
     });
 })
