@@ -24,7 +24,7 @@ PRIMARY KEY ( `category` ) );
 
 
 insert into categories (category, item_description, createdat, updatedat) 
-values ("guns", current_timestamp(), current_timestamp()), ("Spacecrafts & land_vehicles", current_timestamp(), current_timestamp()), ("body_armor & helmets", current_timestamp(), current_timestamp());
+values ("Weapons", current_timestamp(), current_timestamp()), ("Vehicles", current_timestamp(), current_timestamp()), ("Armor", current_timestamp(), current_timestamp());
 insert into products (item_name, item_description, category, price, quantity, imgurl, createdat, updatedat)
 values 
 -- Armors for rent
