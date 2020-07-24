@@ -12,18 +12,23 @@ CREATE TABLE if not exists `products` (
  `quantity` int(11) NOT NULL,  
  `imgurl` varchar(1000),  /* Set ID as primary key */
  `createdat` date,
- `updatedat` date,   
+ `updatedat` date,
+ `categoryID` int,
  PRIMARY KEY ( `id` ) );
  
 CREATE TABLE if not exists `categories` (  
 `category` varchar(255) NOT NULL,  
-`item_description` varchar(1000) NOT NULL,  /* Set ID as primary key */ 
+`item_description` varchar(1000),  /* Set ID as primary key */ 
 `createdat` date,
 `updatedat` date,  
 PRIMARY KEY ( `category` ) );
 
+create table if not exists `emails` (
+`name` varchar(100),
+`emailAddress` varchar(100)
+);
 
-insert into categories (category, item_description, createdat, updatedat) 
+insert into categories (category, createdat, updatedat) 
 values ("Weapons", current_timestamp(), current_timestamp()), ("Vehicles", current_timestamp(), current_timestamp()), ("Armor", current_timestamp(), current_timestamp());
 insert into products (item_name, item_description, category, price, quantity, imgurl, createdat, updatedat)
 values 
@@ -60,6 +65,9 @@ values
 ('Alpha-3 Nimbus-class V-wing starfighter', 'The Alpha-3 Nimbus-class V-wing starfighter, also known as the Alpha-3 Nimbus or V-wing starfighter, was a starfighter model manufactured by Kuat Systems Engineering', 'Vehicles', '120000', '2', 'https://vignette.wikia.nocookie.net/starwars/images/a/a9/V-wing_BF2.png/revision/latest/scale-to-width-down/1000?cb=20170825000555', current_timestamp(), current_timestamp()),
 ('Armored Assault Tank', 'The Armored Assault Tank, also known as the AAT battle tank or the AAT-1 Hover Tank, was a tank vehicle used by the Trade Federation.', 'Vehicles', '750', '4', 'https://vignette.wikia.nocookie.net/starwars/images/c/c9/AAT_BF2.png/revision/latest/scale-to-width-down/1000?cb=20170825000512', current_timestamp(), current_timestamp()),
 ('All Terrain MegaCaliber Six (AT-M6)', 'The All Terrain MegaCaliber Six (AT-M6), also known as the Gorilla Walker or First Order Heavy Assault Walker, was a mobile heavy artillery walker used by the First Order during their war with the Resistance.', 'Vehicles', '175000', '6', 'https://vignette.wikia.nocookie.net/starwars/images/c/cf/AT-M6.png/revision/latest/scale-to-width-down/1000?cb=20180107171850',  current_timestamp(), current_timestamp());
+
+insert into emails (`name`, `emailAddress`)
+values ("jimbo", "jimboslice@gmail.com");
 
 
 update products set categoryID=3 where category="Armor";

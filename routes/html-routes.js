@@ -24,4 +24,22 @@ module.exports = function(app) {
   app.get("/armor", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/armor.html"));
   });
+  app.get("/index", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+  });
+  // cms route loads cms.html
+  app.get("/cms", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/vehicles.html"));
+  });
+  // blog route loads blog.html
+  app.get("/blog", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/weapons.html"));
+  });
+  // authors route loads author-manager.html
+  app.get("/authors", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/cart.html"));
+  });
+  app.get("/armor", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/armor.html"));
+  });
 };

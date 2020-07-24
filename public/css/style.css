@@ -42,9 +42,35 @@
   background-position: center;
   background-size: cover;
 }
+
+
+#cartBody {
+  background-image: url(../css/images/backgrounds/tandemBikers.png);
+  position: absolute;
+  top: 110px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#cartContainer {
+  background-color: white;
+  margin-left: 60%;
+  margin-right: 15%;
+  margin-top: 100px;
+  height: 70%;
+}
 .Sale {
   text-align: center;
+}
+#cartTable {
+  width: 100%;
+}
 
+.cartColumn {
+  width: 50%;
 }
 
 #armorBackground {
