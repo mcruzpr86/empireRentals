@@ -42,4 +42,8 @@ module.exports = function(app) {
   app.get("/armor", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/armor.html"));
   });
+
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"))
+  })
 };
