@@ -1,15 +1,13 @@
 DROP DATABASE IF EXISTS `rebelrentals`;
 CREATE DATABASE if not exists `rebelrentals`;
 USE `rebelrentals`;
-
-
-CREATE TABLE if not exists `products` ( 
- `id` int (11) AUTO_INCREMENT NOT NULL,     
- `item_name` VARCHAR(255) NOT NULL,     
- `item_description` varchar(1000),     
- `category` varchar(255) NOT NULL references categories(category),    
- `price` decimal(13,2) NOT NULL,  
- `quantity` int(11) NOT NULL,  
+CREATE TABLE if not exists `products` (
+ `id` int (11) AUTO_INCREMENT NOT NULL,
+ `item_name` VARCHAR(255) NOT NULL,
+ `item_description` varchar(1000),
+ `category` varchar(255) NOT NULL references categories(category),
+ `price` decimal(13,2) NOT NULL,
+ `quantity` int(11) NOT NULL,
  `imgurl` varchar(1000),  /* Set ID as primary key */
  `createdat` date,
  `updatedat` date,
@@ -19,8 +17,9 @@ CREATE TABLE if not exists `products` (
 CREATE TABLE if not exists `categories` (  
 `category` varchar(255) NOT NULL,  
 `item_description` varchar(1000),  /* Set ID as primary key */ 
+
 `createdat` date,
-`updatedat` date,  
+`updatedat` date,
 PRIMARY KEY ( `category` ) );
 
 create table if not exists `emails` (
@@ -29,13 +28,14 @@ create table if not exists `emails` (
 );
 
 insert into categories (category, createdat, updatedat) 
+
 values ("Weapons", current_timestamp(), current_timestamp()), ("Vehicles", current_timestamp(), current_timestamp()), ("Armor", current_timestamp(), current_timestamp());
 insert into products (item_name, item_description, category, price, quantity, imgurl, createdat, updatedat)
-values 
+values
 -- Armors for rent
-("Standard Issue Imperial", "Regular white armor developed on planet gilvaanen", "Armor", 100, 10, "https://vignette.wikia.nocookie.net/starwars/images/e/e4/Anovos_Stormtrooper_Armor.png/revision/latest?cb=20160407222252",  current_timestamp(),  current_timestamp()),   
-("Sand Trooper Armor", "Armor built to withstand the heat of the deserts of endor", "Armor", 120, 8, "https://vignette.wikia.nocookie.net/starwars/images/7/78/Sandtrooper_DICE.png/revision/latest?cb=20151107002620",  current_timestamp(),  current_timestamp()),   
-("Scout Trooper Armor", "Armor built for mobility on speed bikes and sharpshooting", "Armor", 125, 10, "https://vignette.wikia.nocookie.net/starwars/images/c/c4/Biker_Scout_DICE.png/revision/latest?cb=20151106042648",  current_timestamp(),  current_timestamp()),    
+("Standard Issue Imperial", "Regular white armor developed on planet gilvaanen", "Armor", 100, 10, "https://vignette.wikia.nocookie.net/starwars/images/e/e4/Anovos_Stormtrooper_Armor.png/revision/latest?cb=20160407222252",  current_timestamp(),  current_timestamp()),
+("Sand Trooper Armor", "Armor built to withstand the heat of the deserts of endor", "Armor", 120, 8, "https://vignette.wikia.nocookie.net/starwars/images/7/78/Sandtrooper_DICE.png/revision/latest?cb=20151107002620",  current_timestamp(),  current_timestamp()),
+("Scout Trooper Armor", "Armor built for mobility on speed bikes and sharpshooting", "Armor", 125, 10, "https://vignette.wikia.nocookie.net/starwars/images/c/c4/Biker_Scout_DICE.png/revision/latest?cb=20151106042648",  current_timestamp(),  current_timestamp()),
 ("Death Trooper", "Elite armor designed for stealth missions, espionage, and lethality", "Armor", 100, 10, "https://vignette.wikia.nocookie.net/starwars/images/e/e3/Death_Trooper-Sideshow.png/revision/latest?cb=20160913102558",  current_timestamp(),  current_timestamp()),
 ("Crimson Trooper", "Armor designed to withstand the heat of a volcano", "Armor", 115, 10, "https://vignette.wikia.nocookie.net/starwars/images/4/4b/Crimson_stormtrooper-Rebelscum.jpg/revision/latest?cb=20170905164518",  current_timestamp(),  current_timestamp()),
 ("Incinerator Trooper", "Built to withstand heat, built in strength support", "Armor", 120, 10, "https://vignette.wikia.nocookie.net/starwars/images/f/ff/Incinerator_Stormtrooper_Sideshow.png/revision/latest?cb=20200121025506", current_timestamp(),  current_timestamp()),
@@ -56,6 +56,12 @@ values
 ('614-AvA speeder bike', 'The 614-AvA speeder bike, also known as the Lothal Speeder Bike, was an Imperial Military speeder bike model manufactured by Aratech Repulsor Company. The Galactic Empire utilized the vehicle most notably during its occupation of Lothal.', 'Vehicles', '4200', '5', 'https://vignette.wikia.nocookie.net/starwars/images/b/b5/Speeder_bike_disney_xd.jpg/revision/latest?cb=20151019032852',  current_timestamp(), current_timestamp()),
 ('CK-6 swoop bike', 'The CK-6 swoop bikes were swoop bikes specifically modified to operate in freezing weather. They were used by the clone troopers of the Galactic Republic.', 'Vehicles', '750', '4', 'https://vignette.wikia.nocookie.net/starwars/images/1/14/Freecobike.png/revision/latest/scale-to-width-down/1000?cb=20121215052810',  current_timestamp(), current_timestamp()),
 ('Longspur STAP', 'Longspur STAPs were a make of one-man hoverbike available during the Cold War between the Galactic Republic and the reconstituted Sith Empire.', 'Vehicles', '500', '30', 'https://vignette.wikia.nocookie.net/starwars/images/1/1c/Longspur_STAP.jpg/revision/latest?cb=20131209131858',  current_timestamp(), current_timestamp()),
+
+
+
+
+
+
 ('Sandcrawler', 'Sandcrawlers, originally called digger crawlers, were huge mobile fortresses used by the Jawas as their transport and shelter in the deserts of Tatooine and Arvala-7.', 'Vehicles', '500', '1', 'https://vignette.wikia.nocookie.net/starwars/images/f/ff/Sandcrawler.png/revision/latest/scale-to-width-down/1000?cb=20130812001443',  current_timestamp(), current_timestamp()),
 ('IG-227 Hailfire-class droid tank', 'The IG-227 Hailfire-class droid tank was a model of droid tank manufactured by Haor Chall Engineering that was used by the InterGalactic Banking Clan and Confederacy of Independent Systems during the Clone Wars as well as the Alliance to Restore the Republic during the Galactic Civil War.', 'Vehicles', '60000', '5', 'https://vignette.wikia.nocookie.net/starwars/images/6/67/Hailfire_Droid_Tank_WotF.png/revision/latest/scale-to-width-down/999?cb=20190616223924', current_timestamp(), current_timestamp()),
 ('Elite AT-AT', 'A modified AT-AT, the Elite AT-AT was armed with thicker and darker armor, and heavier laser cannons. It was piloted by an elite vehicle crew who were among the best pilots in the Galactic Empire.', 'Vehicles', '160000', '5', 'https://vignette.wikia.nocookie.net/starwars/images/1/11/SWC_Elite_AT-AT.png/revision/latest?cb=20161016223101',  current_timestamp(), current_timestamp()),
@@ -65,10 +71,6 @@ values
 ('Alpha-3 Nimbus-class V-wing starfighter', 'The Alpha-3 Nimbus-class V-wing starfighter, also known as the Alpha-3 Nimbus or V-wing starfighter, was a starfighter model manufactured by Kuat Systems Engineering', 'Vehicles', '120000', '2', 'https://vignette.wikia.nocookie.net/starwars/images/a/a9/V-wing_BF2.png/revision/latest/scale-to-width-down/1000?cb=20170825000555', current_timestamp(), current_timestamp()),
 ('Armored Assault Tank', 'The Armored Assault Tank, also known as the AAT battle tank or the AAT-1 Hover Tank, was a tank vehicle used by the Trade Federation.', 'Vehicles', '750', '4', 'https://vignette.wikia.nocookie.net/starwars/images/c/c9/AAT_BF2.png/revision/latest/scale-to-width-down/1000?cb=20170825000512', current_timestamp(), current_timestamp()),
 ('All Terrain MegaCaliber Six (AT-M6)', 'The All Terrain MegaCaliber Six (AT-M6), also known as the Gorilla Walker or First Order Heavy Assault Walker, was a mobile heavy artillery walker used by the First Order during their war with the Resistance.', 'Vehicles', '175000', '6', 'https://vignette.wikia.nocookie.net/starwars/images/c/cf/AT-M6.png/revision/latest/scale-to-width-down/1000?cb=20180107171850',  current_timestamp(), current_timestamp());
-
-insert into emails (`name`, `emailAddress`)
-values ("jimbo", "jimboslice@gmail.com");
-
 
 update products set categoryID=3 where category="Armor";
 update products set categoryID=2 where category="Vehicles";
