@@ -25,6 +25,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../HTML/armor.html"));
   });
   app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../HTML/index.html"))
+    res.sendFile(path.join(__dirname, "/HTML/index.html"))
   })
 };
